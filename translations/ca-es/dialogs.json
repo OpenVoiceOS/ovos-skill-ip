@@ -1,31 +1,33 @@
 {
-    "last digits.dialog": [
-        "La meva I.P. acaba en { digits }",
-        "La meva adre\u00e7a I.P acaba en { digits }",
-        "Acaba en { digits }"
-    ],
-    "ethernet.connection.dialog": [
-        "Estic connectat per cable"
-    ],
-    "dot.dialog": [
-        "punt"
-    ],
-    "my address is.dialog": [
-        "La meva adre\u00e7a de xarxa I.P. \u00e9s {ip}",
-        "Tinc l'adre\u00e7a I.P. {ip}"
-    ],
-    "my address on X is Y.dialog": [
-        "La meva adre\u00e7a I.P. a {interface} \u00e9s {ip}."
-    ],
-    "last digits device.dialog": [
-        "La meva i.p. a { device } acaba en { digits }",
-        "La meva adre\u00e7a i.p. a { device } acaba en { digits }",
-        "La i.p a { device } acaba en { digits }",
-        "L'adre\u00e7a i.p. a { device } acaba en { digits }",
-        "A { device } acaba en { digits }"
-    ],
-    "no network connection.dialog": [
-        "Encara no tinc una connexi\u00f3 de xarxa",
-        "No estic connectat a cap xarxa"
-    ]
+  "last digits.dialog": [
+    "La meva I.P. acaba en { digits }",
+    "La meva adreça I.P acaba en { digits }",
+    "La meva I.P. acaba en { digits }",
+    "La meva adreça I.P. acaba en { digits }",
+    "acaba en { digits }"
+  ],
+  "ethernet.connection.dialog": [
+    "Estic connectat per cable"
+  ],
+  "dot.dialog": [
+    "punt"
+  ],
+  "my address is.dialog": [
+    "La meva adreça de xarxa I.P. és {ip}",
+    "Tinc l'adreça I.P. {ip}"
+  ],
+  "my address on X is Y.dialog": [
+    "La meva adreça I.P. a {interface} és {ip}."
+  ],
+  "last digits device.dialog": [
+    "La meva i.p. a { device } acaba en { digits }",
+    "La meva adreça i.p. a { device } acaba en { digits }",
+    "La i.p a { device } acaba en { digits }",
+    "L'adreça i.p. a { device } acaba en { digits }",
+    "A { device } acaba en { digits }"
+  ],
+  "no network connection.dialog": [
+    "Encara no tinc una connexió de xarxa",
+    "No estic connectat a cap xarxa"
+  ]
 }
