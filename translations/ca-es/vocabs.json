@@ -1,39 +1,24 @@
 {
-    "IP.voc": [
-        "adre\u00e7a i pe",
-        "adre\u00e7a i p",
-        "adre\u00e7a ipe",
-        "adre\u00e7a hype",
-        "i p",
-        "i pe",
-        "ipe",
-        "hype",
-        "adre\u00e7a de xarxa"
-    ],
-    "query.voc": [
-        "com",
-        "quina",
-        "quin",
-        "digues",
-        "diga'm",
-        "digues-me",
-        "digue'm",
-        "dis-me",
-        "mostra",
-        "mostra'm",
-        "mostrar"
-    ],
-    "digits.voc": [
-        "d\u00edgits",
-        "d\u00edgit",
-        "part",
-        "nombres",
-        "nombre",
-        "n\u00fameros",
-        "n\u00fameros"
-    ],
-    "last.voc": [
-        "acaba",
-        "final"
-    ]
+  "IP.voc": [
+    "adreça i pe",
+    "adreça i p",
+    "adreça ipe"
+  ],
+  "query.voc": [
+    "com",
+    "quina",
+    "quin",
+    "digues"
+  ],
+  "digits.voc": [
+    "dígits",
+    "dígit",
+    "part",
+    "nombres",
+    "nombre"
+  ],
+  "last.voc": [
+    "acaba",
+    "final"
+  ]
 }
