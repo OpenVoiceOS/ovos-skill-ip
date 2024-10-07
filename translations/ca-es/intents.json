@@ -1,7 +1,5 @@
 {
-    "what.ssid.intent": [
-        "a quina (xarxa|essa essa i de|wifi|xarxa wifi) est\u00e0s (connectat|connectada)",
-        "(quin|quina) (xarxa|essa essa i de|wifi|xarxa wifi) est\u00e0s (usant|fent servir|utilitzant|connectat)",
-        "(quin|quina) (xarxa|essa essa i de|wifi|xarxa wifi) (tens|uses|fas servir|utilitzes)"
-    ]
+  "what.ssid.intent": [
+    "a quina (xarxa|essa essa i de|wifi|xarxa wifi) estàs (connectat|connectada)"
+  ]
 }
