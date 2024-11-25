@@ -1,0 +1,20 @@
+{
+  "skill_id": "skill-ovos-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-ip",
+  "name": "Adreça IP del dispositiu",
+  "description": "Informació de connexió de la xarxa",
+  "examples": [
+    "Quina és la teva adreça de xarxa?",
+    "Quina és la teva adreça IP?",
+    "Digues-me la teva adreça IP",
+    "Digues-me la teva adreça de xarxa",
+    "A quina xarxa estàs connectat?"
+  ],
+  "tags": [
+    "Adreça IP",
+    "AdreçaIP",
+    "adreça-xarxa",
+    "xarxa",
+    "sistema"
+  ]
+}

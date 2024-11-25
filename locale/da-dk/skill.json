@@ -1,0 +1,20 @@
+{
+  "skill_id": "skill-ovos-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-ip",
+  "name": "Enhedens IP-adresse",
+  "description": "Oplysninger om netværksforbindelse",
+  "examples": [
+    "Hvad er din netværksadresse?",
+    "Hvad er din IP-adresse?",
+    "Fortæl mig din IP-adresse",
+    "Fortæl mig din netværksadresse",
+    "Hvilket netværk er du tilsluttet?"
+  ],
+  "tags": [
+    "IP-adresse",
+    "IP-adresse",
+    "netværksadresse",
+    "netværk",
+    "system"
+  ]
+}
