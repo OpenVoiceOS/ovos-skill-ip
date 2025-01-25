@@ -1,3 +1,3 @@
-adreça i p
-adreça i pe
-adreça ipe
+(IP|i pe|i p)
+adreça (i p|ip|de xarxa)
+xarxa

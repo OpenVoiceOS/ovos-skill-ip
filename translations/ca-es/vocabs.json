@@ -1,14 +1,14 @@
 {
   "IP.voc": [
-    "adreça i pe",
-    "adreça i p",
-    "adreça ipe"
+    "(IP|i pe|i p)",
+    "adreça (i p|ip|de xarxa)",
+    "xarxa"
   ],
   "query.voc": [
     "com",
     "quina",
     "quin",
-    "digues"
+    "digues[-me]"
   ],
   "digits.voc": [
     "dígits",
