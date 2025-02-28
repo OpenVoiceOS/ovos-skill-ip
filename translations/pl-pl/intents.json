@@ -1,5 +1,5 @@
 {
     "what.ssid.intent": [
-        "(Do |)(kt\u00f3rej|kt\u00f3rego) (sieci|ssid|wifi|sieci bezprzewodowej|sieci wifi) (jeste\u015b po\u0142\u0105czony|u\u017cywasz)"
+        "(Do |)(której|którego) (sieci|ssid|wifi|sieci bezprzewodowej|sieci wifi) (jesteś połączony|używasz)"
     ]
 }

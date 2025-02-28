@@ -1,5 +1,5 @@
 {
-  "what.ssid.intent": [
-    "a quina (xarxa|essa essa i de|wifi|xarxa wifi) estàs (connectat|connectada)"
-  ]
+    "what.ssid.intent": [
+        "a quina (xarxa|essa essa i de|wifi|xarxa wifi) estàs (connectat|connectada)"
+    ]
 }

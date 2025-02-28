@@ -1,5 +1,12 @@
 {
-  "what.ssid.intent": [
-    "mit (welche|welchem|welchen|welcher|welches) (netzwerk|wlan|wifi) bist du verbunden\nwomit bist du verbunden\nmit was (für|) (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|) bist du verbunden\nbist du mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel) verbunden\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Netzwerkverbindung\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Verbindung mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Verbindung mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\n(wie|) bist du (mit dem (wlan|wifi|netzwerk)|) verbunden"
-  ]
+    "what.ssid.intent": [
+        "(wie|) bist du (mit dem (wlan|wifi|netzwerk)|) verbunden",
+        "bist du mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel) verbunden",
+        "hast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)",
+        "hast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Netzwerkverbindung",
+        "hast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Verbindung mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)",
+        "mit (welche|welchem|welchen|welcher|welches) (netzwerk|wlan|wifi) bist du verbunden",
+        "mit was (für|) (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|) bist du verbunden",
+        "womit bist du verbunden"
+    ]
 }

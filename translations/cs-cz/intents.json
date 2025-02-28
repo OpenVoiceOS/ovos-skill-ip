@@ -1,5 +1,5 @@
 {
     "what.ssid.intent": [
-        "(na|) (jakou|jak\u00e9) (s\u00ed\u0165|ssid|wifi|wifi s\u00ed\u0165) (pou\u017e\u00edv\u00e1\u0161|jsi p\u0159ipojen|jsi)"
+        "(na|) (jakou|jaké) (síť|ssid|wifi|wifi síť) (používáš|jsi připojen|jsi)"
     ]
 }
