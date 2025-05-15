@@ -1,6 +1,6 @@
 {
-  "skill_id": "skill-ovos-ip.openvoiceos",
-  "source": "https://github.com/OpenVoiceOS/skill-ovos-ip",
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
   "name": "Enhedens IP-adresse",
   "description": "Oplysninger om netværksforbindelse",
   "examples": [
