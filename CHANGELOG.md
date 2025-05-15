@@ -1,12 +1,16 @@
 # Changelog
 
-## [0.2.7a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.7a1) (2024-12-26)
+## [0.2.8a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.8a2) (2025-05-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6...0.2.7a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.8a1...0.2.8a2)
 
 **Merged pull requests:**
 
-- refactor: drop custom QML [\#29](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/29) ([JarbasAl](https://github.com/JarbasAl))
+- fix: standardize urls / skill-id / pypi-name [\#33](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/33) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.2.8a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.8a1) (2025-02-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.7...0.2.8a1)
 
 
 
