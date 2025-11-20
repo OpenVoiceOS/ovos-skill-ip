@@ -1,14 +1,24 @@
 {
-    "IP.voc": [
-        "direcci\u00f3n IP",
-        "IP",
-        "direcci\u00f3n de red"
-    ],
-    "query.voc": [
-        "qu\u00e9",
-        "dime",
-        "di",
-        "muestra",
-        "cu\u00e1l"
-    ]
+  "IP.voc": [
+    "dirección IP",
+    "IP",
+    "dirección de red"
+  ],
+  "query.voc": [
+    "qué",
+    "dime",
+    "di",
+    "muestra"
+  ],
+  "digits.voc": [
+    "dígitos",
+    "dígito",
+    "parte",
+    "números",
+    "número"
+  ],
+  "last.voc": [
+    "último",
+    "final"
+  ]
 }
