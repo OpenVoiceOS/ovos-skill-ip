@@ -1,16 +1,33 @@
 {
-    "dot.dialog": [
-        "punto"
-    ],
-    "my address is.dialog": [
-        "mi direcci\u00f3n I.P. es la {ip}",
-        "tengo la I.P. {ip}"
-    ],
-    "my address on X is Y.dialog": [
-        "en la interfaz {interface} tengo la I.P {ip}."
-    ],
-    "no network connection.dialog": [
-        "A\u00fan no tengo una conexi\u00f3n de red",
-        "No estoy conectado a la red"
-    ]
+  "last digits.dialog": [
+    "Mi IP termina en { digits }",
+    "Mi dirección IP termina en { digits }",
+    "Mi IP termina en { digits }",
+    "Mi dirección IP termina en { digits }",
+    "termina en { digits }"
+  ],
+  "ethernet.connection.dialog": [
+    "Estoy conectado por cable"
+  ],
+  "dot.dialog": [
+    "punto"
+  ],
+  "my address is.dialog": [
+    "mi dirección I.P. es la {ip}",
+    "tengo la I.P. {ip}"
+  ],
+  "my address on X is Y.dialog": [
+    "en la interfaz {interface} tengo la I.P {ip}."
+  ],
+  "last digits device.dialog": [
+    "En { device } mi IP termina en { digits }",
+    "En { device } mi dirección IP termina en { digits }",
+    "En { device } mi IP termina en { digits }",
+    "En { device } mi dirección IP termina en { digits }",
+    "En { device } termina en { digits }"
+  ],
+  "no network connection.dialog": [
+    "Aún no tengo una conexión de red",
+    "No estoy conectado a la red"
+  ]
 }
