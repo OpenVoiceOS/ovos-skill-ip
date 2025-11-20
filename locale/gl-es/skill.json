@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Enderezo IP do dispositivo",
+  "description": "Información sobre a conexión á rede",
+  "examples": [
+    "Cal é o teu enderezo de rede?",
+    "Cal é o teu enderezo IP?",
+    "Dime o teu enderezo IP",
+    "Dime o teu enderezo de rede",
+    "A que rede estás (contectada|conectado)?"
+  ],
+  "tags": [
+    "enderezo IP",
+    "enderezo IP",
+    "enderezo de rede",
+    "rede",
+    "sistema"
+  ]
+}
