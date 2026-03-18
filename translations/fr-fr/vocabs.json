@@ -1,0 +1,25 @@
+{
+  "IP.voc": [
+    "adresse IP",
+    "adresse réseau",
+    "IP"
+  ],
+  "query.voc": [
+    "comment",
+    "dis",
+    "montre",
+    "quel"
+  ],
+  "digits.voc": [
+    "chiffre",
+    "chiffres",
+    "nombre",
+    "nombres",
+    "partie"
+  ],
+  "last.voc": [
+    "dernier",
+    "derniers",
+    "final"
+  ]
+}
