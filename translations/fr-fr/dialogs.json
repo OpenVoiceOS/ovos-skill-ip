@@ -1,0 +1,27 @@
+{
+  "last digits.dialog": [
+    "Mon adresse IP se termine par { digits }.",
+    "Elle se termine par { digits }."
+  ],
+  "ethernet.connection.dialog": [
+    "Je suis sur une connexion filaire."
+  ],
+  "dot.dialog": [
+    "point"
+  ],
+  "my address is.dialog": [
+    "Mon adresse IP est {ip}.",
+    "Mon adresse réseau est {ip}."
+  ],
+  "my address on X is Y.dialog": [
+    "Sur {interface}, mon adresse IP est {ip}."
+  ],
+  "last digits device.dialog": [
+    "Sur { device }, elle se termine par { digits }.",
+    "Sur { device }, mon adresse IP se termine par { digits }."
+  ],
+  "no network connection.dialog": [
+    "Je n'ai pas encore de connexion réseau.",
+    "Je ne suis connecté à aucun réseau."
+  ]
+}
