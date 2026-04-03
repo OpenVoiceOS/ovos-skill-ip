@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.10a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.10a1) (2026-04-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.9a1...0.2.10a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#38](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/38) ([JarbasAl](https://github.com/JarbasAl))
+- Add French IP locale [\#37](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/37) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.2.9a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.9a1) (2025-11-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.8...0.2.9a1)
