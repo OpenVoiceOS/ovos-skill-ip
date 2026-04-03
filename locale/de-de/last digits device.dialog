@@ -1,0 +1,4 @@
+Auf {{ device }} endet meine IP (Adresse|) mit {{ digits }}
+Auf {{ device }} endet sie mit {{ digits }}
+Auf {{ device }} endet meine IP (Adresse|) mit der (Zahl|Ziffer) {{ digits }}
+Auf {{ device }} endet sie mit der (Zahl|Ziffer) {{ digits }}

@@ -1,0 +1,2 @@
+Auf {{ device }} ist meine IP (Adresse|) {{ ip }}
+Auf {{ device }} ist sie {{ ip }}
