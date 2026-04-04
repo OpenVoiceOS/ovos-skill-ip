@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.11a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.11a1) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.10a2...0.2.11a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#42](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/42) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.10a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.10a2) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.10a1...0.2.10a2)
