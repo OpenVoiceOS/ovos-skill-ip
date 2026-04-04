@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.10a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.10a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.10a1...0.2.10a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#40](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/40) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.10a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.10a1) (2026-04-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.9a1...0.2.10a1)
