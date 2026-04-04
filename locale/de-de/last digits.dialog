@@ -1,4 +1,0 @@
-Meine IP (Adresse|) endet mit {{ digits }}
-Sie endet mit {{ digits }}
-Meine IP (Adresse|) endet mit der (Zahl|Ziffer) {{ digits }}
-Sie endet mit der (Zahl|Ziffer) {{ digits }}
