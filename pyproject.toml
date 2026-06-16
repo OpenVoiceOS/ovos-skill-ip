@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-ip"
+dynamic = ["version"]
+description = "OVOS IP address skill"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+dependencies = [
+    "ifaddr",
+    "ovos-workshop"
+]
+
+[project.optional-dependencies]
+test = [
+    "ovoscope",
+    "pytest",
+    "ovos-plugin-manager",
+    "ovos-utils"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-ip"
+
+[project.entry-points."opm.skill"]
+"ovos-skill-ip.openvoiceos" = "ovos_skill_ip:IPSkill"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_skill_ip.version.__version__"}
+
+[tool.setuptools]
+packages = ["ovos_skill_ip"]
+package-dir = {"ovos_skill_ip" = "."}
+
+[tool.setuptools.package-data]
+ovos_skill_ip = [
+    "*.json",
+    "locale/**/*",
+]
