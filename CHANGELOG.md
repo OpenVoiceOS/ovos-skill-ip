@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a2) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a1...0.3.0a2)
+
+**Merged pull requests:**
+
+- test\(en-US\): add ovoscope end-to-end intent tests [\#48](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/48) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a1) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.11a1...0.3.0a1)
