@@ -1,0 +1,4 @@
+# the address being asked about; a "local"/"public"/"lan" qualifier is
+# absorbed by the keyword match and does not need its own entry
+IP [(address|number)]
+network address

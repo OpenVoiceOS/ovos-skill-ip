@@ -50,20 +50,20 @@ class IPSkill(OVOSSkill):
             self.register_intent_file("what.ssid.intent",
                                       self.handle_SSID_query)
 
-    @intent_handler(IntentBuilder("IPIntent").require("query").require("IP"))
+    @intent_handler(IntentBuilder("IPIntent").require("query").require("ip"))
     def handle_query_IP(self, message):
         addr = get_ifaces()
         dot = self.dialog_renderer.render("dot")
 
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
         elif len(addr) == 1:
             self.enclosure.deactivate_mouth_events()
             iface, ip = addr.popitem()
             self.gui_show(ip)
             ip_spoken = ip.replace(".", " " + dot + " ")
-            self.speak_dialog("my address is",
+            self.speak_dialog("my_address_is",
                               {'ip': ip_spoken}, wait=True)
         else:
             self.enclosure.deactivate_mouth_events()
@@ -71,7 +71,7 @@ class IPSkill(OVOSSkill):
                 ip = addr[iface]
                 self.gui_show(ip)
                 ip_spoken = ip.replace(".", " " + dot + " ")
-                self.speak_dialog("my address on X is Y",
+                self.speak_dialog("my_address_on_x_is_y",
                                   {'interface': iface, 'ip': ip_spoken},
                                   wait=True)
 
@@ -82,7 +82,7 @@ class IPSkill(OVOSSkill):
         addr = get_ifaces()
         ssid = None
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
 
         # TODO - use bus api for PHAL network manager that reports this instead
@@ -102,13 +102,13 @@ class IPSkill(OVOSSkill):
             else:
                 self.speak_dialog("ethernet.connection")
 
-    @intent_handler(IntentBuilder("LastIPDigitsIntent").require("query").require("IP")
+    @intent_handler(IntentBuilder("LastIPDigitsIntent").require("query").require("ip")
                     .require("last").optionally("digits"))
     def handle_query_last_part_IP(self, message):
         ip = None
         addr = get_ifaces()
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
 
         self.enclosure.deactivate_mouth_events()
@@ -139,12 +139,12 @@ class IPSkill(OVOSSkill):
     def speak_last_digits(self, ip):
         ip_end = ip.split(".")[-1]
         self.gui_show(ip_end)
-        self.speak_dialog("last digits", data={"digits": ip_end}, wait=True)
+        self.speak_dialog("last_digits", data={"digits": ip_end}, wait=True)
 
     def speak_multiple_last_digits(self, addr):
         for key in addr:
             ip_end = addr[key].split(".")[-1]
             self.gui_show(ip_end)
-            self.speak_dialog("last digits device",
+            self.speak_dialog("last_digits_device",
                               data={'device': key, 'digits': ip_end},
                               wait=True)
