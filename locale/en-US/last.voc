@@ -1,2 +1,4 @@
+# selects the trailing part of the address ("the last digits of my ip")
 final
 last
+ending

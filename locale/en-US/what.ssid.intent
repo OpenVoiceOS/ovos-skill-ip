@@ -1,1 +1,5 @@
-what (network|ssid|wifi|wifi network) are you (on|using|connected to)
+what (network|wifi [network]|ssid) are you (on|using|connected to)
+what (network|wifi|ssid) am i (on|using|connected to)
+which (network|wifi|ssid) are you (on|using|connected to)
+what is the (ssid|network name)
+what is the name of the (network|wifi)
