@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a1) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.11a1...0.3.0a1)
+
+**Merged pull requests:**
+
+- fix\(en-US\): broaden IP intent coverage and fix malformed dialog slots [\#46](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/46) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.11a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.11a1) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.10a2...0.2.11a1)
