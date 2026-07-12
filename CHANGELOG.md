@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a3) (2026-07-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a2...0.3.0a3)
+
+**Merged pull requests:**
+
+- fix: allow ovos-workshop 9.x [\#50](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/50) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a2) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a1...0.3.0a2)
