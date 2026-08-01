@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a4) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a3...0.3.0a4)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#53](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/53) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.0a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a3) (2026-07-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a2...0.3.0a3)
