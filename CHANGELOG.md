@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0a5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a5) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a4...0.3.0a5)
+
+**Merged pull requests:**
+
+- test: add golden-utterance end2end suite \(en-US\) [\#55](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/55) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.0a4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a4) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a3...0.3.0a4)
