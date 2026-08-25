@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0a6](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a6) (2026-08-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a5...0.3.0a6)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update ip.voc [\#58](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/58) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(kab-DZ\): update what.ssid.intent [\#57](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/57) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.3.0a5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.0a5) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a4...0.3.0a5)
