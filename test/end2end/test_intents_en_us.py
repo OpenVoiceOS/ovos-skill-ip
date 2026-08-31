@@ -1,9 +1,13 @@
 """End-to-end intent-routing tests for ovos-skill-ip (en-US).
 
-Each case feeds an utterance through a MiniCroft stack and asserts it routes
-to the expected Adapt handler. Coverage spans the plain address query
-(``IPIntent``) across its verb and qualifier phrasings, and the trailing-part
-query (``LastIPDigitsIntent``).
+Each case feeds an utterance through a MiniCroft stack running the default
+pipeline (Adapt plus the Padatious-family plugins) and asserts it routes to
+the expected handler. Coverage spans the plain address query (``IPIntent``)
+across its verb and qualifier phrasings, and the trailing-part query
+(``LastIPDigitsIntent``). Both intents are registered from ``.intent`` files
+and route via the Padatious-family pipeline; see
+``test_intents_en_us_no_adapt.py`` for coverage that pins the pipeline to
+exclude Adapt entirely.
 
 The ``what.ssid.intent`` handler is intentionally not exercised here: it only
 registers when ``iwlist`` is present on the host, which is not the case in CI.
@@ -24,6 +28,7 @@ PIPELINE = [
     "ovos-adapt-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-medium",
     "ovos-adapt-pipeline-plugin-low",
+    "ovos-padacioso-pipeline-plugin",
 ]
 
 
@@ -70,11 +75,17 @@ class TestIPIntent(_IntentRoutingMixin, TestCase):
     def test_whats_my_ip(self):
         self._assert_intent("what's my ip", "IPIntent")
 
+    def test_how_do_i_find_my_ip(self):
+        self._assert_intent("how do I find my ip", "IPIntent")
+
     def test_what_is_my_ip(self):
         self._assert_intent("what is my ip", "IPIntent")
 
     def test_whats_my_local_ip_address(self):
         self._assert_intent("what's my local ip address", "IPIntent")
+
+    def test_give_me_my_ip_address(self):
+        self._assert_intent("give me my ip address", "IPIntent")
 
     def test_tell_me_my_ip_address(self):
         self._assert_intent("tell me my ip address", "IPIntent")
@@ -91,6 +102,9 @@ class TestLastIPDigitsIntent(_IntentRoutingMixin, TestCase):
 
     def test_read_the_last_part_of_my_ip(self):
         self._assert_intent("read the last part of my ip", "LastIPDigitsIntent")
+
+    def test_read_me_the_last_part_of_my_ip(self):
+        self._assert_intent("read me the last part of my ip", "LastIPDigitsIntent")
 
     def test_final_digits_of_my_ip_address(self):
         self._assert_intent("tell me the final digits of my ip address", "LastIPDigitsIntent")
