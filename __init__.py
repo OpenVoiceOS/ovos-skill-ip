@@ -12,12 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import re
 from shutil import which
 from subprocess import check_output, CalledProcessError
 
+import requests
 from ifaddr import get_adapters
 from ovos_workshop.decorators import intent_handler
+from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
+
+PUBLIC_IP_URL = "https://api.ipify.org"
+PUBLIC_IP_TIMEOUT = 3
 
 
 def get_ifaces(ignore_list=None):
@@ -44,10 +50,12 @@ def get_ifaces(ignore_list=None):
 class IPSkill(OVOSSkill):
 
     def initialize(self):
-        # Only register the SSID intent if iwlist is installed on the system
+        # Only register the SSID intents if iwlist is installed on the system
         if which("iwlist"):  # TODO - use bus events to get this info, not iwlist
             self.register_intent_file("what.ssid.intent",
                                       self.handle_SSID_query)
+            self.register_intent_file("wifi_signal.intent",
+                                      self.handle_wifi_signal_query)
 
     @intent_handler("IPIntent.intent")
     def handle_query_IP(self, message):
@@ -77,6 +85,25 @@ class IPSkill(OVOSSkill):
         self.enclosure.activate_mouth_events()
         self.enclosure.mouth_reset()
 
+    def scan_wifi(self):
+        """ Shell out to iwlist and parse the ESSID and signal quality of
+        the currently connected network.
+
+        Returns:
+            (str or None) ssid, (str or None) signal quality
+        """
+        ssid = None
+        quality = None
+        scanoutput = check_output(["iwlist", "wlan0", "scan"]).decode("utf-8")
+        for line in scanoutput.splitlines():
+            line = line.strip()
+            if line.startswith("ESSID"):
+                ssid = line.split('"')[1]
+            match = re.search(r"Quality=(\S+)", line)
+            if match:
+                quality = match.group(1)
+        return ssid, quality
+
     def handle_SSID_query(self, message):
         addr = get_ifaces()
         ssid = None
@@ -86,12 +113,7 @@ class IPSkill(OVOSSkill):
 
         # TODO - use bus api for PHAL network manager that reports this instead
         try:
-            scanoutput = check_output(["iwlist", "wlan0", "scan"])
-
-            for line in scanoutput.split():
-                line = line.decode("utf-8")
-                if line[:5] == "ESSID":
-                    ssid = line.split('"')[1]
+            ssid, _ = self.scan_wifi()
         except CalledProcessError:
             # Computer has no wlan0
             pass
@@ -100,6 +122,41 @@ class IPSkill(OVOSSkill):
                 self.speak(ssid)
             else:
                 self.speak_dialog("ethernet.connection")
+
+    def handle_wifi_signal_query(self, message):
+        addr = get_ifaces()
+        quality = None
+        if len(addr) == 0:
+            self.speak_dialog("no_network_connection")
+            return
+
+        try:
+            _, quality = self.scan_wifi()
+        except CalledProcessError:
+            # Computer has no wlan0
+            pass
+        finally:
+            if quality:
+                self.speak_dialog("wifi.signal", {"quality": quality})
+            else:
+                self.speak_dialog("ethernet.connection")
+
+    @intent_handler("PublicIPIntent.intent")
+    @intent_handler(IntentBuilder("PublicIPIntent").require("query")
+                     .require("ip").require("public"))
+    def handle_query_public_IP(self, message):
+        try:
+            response = requests.get(PUBLIC_IP_URL, timeout=PUBLIC_IP_TIMEOUT)
+            response.raise_for_status()
+            ip = response.text.strip()
+        except requests.exceptions.RequestException:
+            self.speak_dialog("public.ip.error")
+            return
+
+        dot = self.dialog_renderer.render("dot")
+        ip_spoken = ip.replace(".", " " + dot + " ")
+        self.gui_show(ip)
+        self.speak_dialog("my.public.ip", {"ip": ip_spoken})
 
     @intent_handler("LastIPDigitsIntent.intent")
     def handle_query_last_part_IP(self, message):
