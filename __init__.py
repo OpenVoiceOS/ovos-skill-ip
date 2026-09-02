@@ -17,7 +17,6 @@ from subprocess import check_output, CalledProcessError
 
 from ifaddr import get_adapters
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 
@@ -50,7 +49,7 @@ class IPSkill(OVOSSkill):
             self.register_intent_file("what.ssid.intent",
                                       self.handle_SSID_query)
 
-    @intent_handler(IntentBuilder("IPIntent").require("query").require("ip"))
+    @intent_handler("IPIntent.intent")
     def handle_query_IP(self, message):
         addr = get_ifaces()
         dot = self.dialog_renderer.render("dot")
@@ -102,8 +101,7 @@ class IPSkill(OVOSSkill):
             else:
                 self.speak_dialog("ethernet.connection")
 
-    @intent_handler(IntentBuilder("LastIPDigitsIntent").require("query").require("ip")
-                    .require("last").optionally("digits"))
+    @intent_handler("LastIPDigitsIntent.intent")
     def handle_query_last_part_IP(self, message):
         ip = None
         addr = get_ifaces()
