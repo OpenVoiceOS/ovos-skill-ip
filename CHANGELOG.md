@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.1a2) (2026-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.1a1...0.3.1a2)
+
+**Merged pull requests:**
+
+- refactor: migrate adapt intents to intent files [\#62](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/62) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.1a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.0a6...0.3.1a1)
