@@ -7,9 +7,10 @@ shared ovoscope golden-utterance dataset, keyed by
 own parametrized test item.
 
 Intent match is asserted off the ``ovos.intent.matched`` bus event's
-``data.intent_name`` field. Adapt intent names (``IPIntent``,
-``LastIPDigitsIntent``) are IntentBuilder names, not ``.intent`` filenames,
-so there's no filename-suffix ambiguity to normalize here. Capture ends at
+``data.intent_name`` field. All intents are registered from ``.intent``
+files (``IPIntent.intent``, ``LastIPDigitsIntent.intent``, etc.), so the
+matched name is always the bare filename stem, with no Adapt-vs-filename
+ambiguity to normalize here. Capture ends at
 ``mycroft.skill.handler.start`` (right after intent binding fires, before
 any handler body runs) so a row never depends on a handler finishing.
 """

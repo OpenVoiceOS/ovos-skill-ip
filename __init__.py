@@ -19,7 +19,6 @@ from subprocess import check_output, CalledProcessError
 import requests
 from ifaddr import get_adapters
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 PUBLIC_IP_URL = "https://api.ipify.org"
@@ -142,8 +141,6 @@ class IPSkill(OVOSSkill):
                 self.speak_dialog("ethernet.connection")
 
     @intent_handler("PublicIPIntent.intent")
-    @intent_handler(IntentBuilder("PublicIPIntent").require("query")
-                     .require("ip").require("public"))
     def handle_query_public_IP(self, message):
         try:
             response = requests.get(PUBLIC_IP_URL, timeout=PUBLIC_IP_TIMEOUT)
