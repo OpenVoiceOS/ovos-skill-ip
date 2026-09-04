@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Adresse IP de l'appareil",
+  "description": "Informations sur la connexion réseau.",
+  "examples": [
+    "Quelle est ton adresse réseau ?",
+    "Quelle est ton adresse IP ?",
+    "Donne-moi ton adresse IP",
+    "À quel réseau es-tu connecté ?"
+  ],
+  "tags": [
+    "adresse-ip",
+    "adresse-réseau",
+    "réseau",
+    "système"
+  ]
+}

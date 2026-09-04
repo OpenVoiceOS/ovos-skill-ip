@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Dirección IP del dispositivo",
+  "description": "Información de conexión de red",
+  "examples": [
+    "¿Cuál es tu dirección de red?",
+    "¿Cuál es tu dirección IP?",
+    "Dime tu dirección IP",
+    "Dime tu dirección de red",
+    "¿A qué red estás conectado?"
+  ],
+  "tags": [
+    "Dirección IP",
+    "Dirección IP",
+    "dirección de red",
+    "red",
+    "sistema"
+  ]
+}

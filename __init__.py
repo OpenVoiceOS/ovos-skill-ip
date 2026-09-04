@@ -12,13 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import re
 from shutil import which
 from subprocess import check_output, CalledProcessError
 
+import requests
 from ifaddr import get_adapters
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
+
+PUBLIC_IP_URL = "https://api.ipify.org"
+PUBLIC_IP_TIMEOUT = 3
 
 
 def get_ifaces(ignore_list=None):
@@ -45,25 +49,27 @@ def get_ifaces(ignore_list=None):
 class IPSkill(OVOSSkill):
 
     def initialize(self):
-        # Only register the SSID intent if iwlist is installed on the system
+        # Only register the SSID intents if iwlist is installed on the system
         if which("iwlist"):  # TODO - use bus events to get this info, not iwlist
             self.register_intent_file("what.ssid.intent",
                                       self.handle_SSID_query)
+            self.register_intent_file("wifi_signal.intent",
+                                      self.handle_wifi_signal_query)
 
-    @intent_handler(IntentBuilder("IPIntent").require("query").require("IP"))
+    @intent_handler("IPIntent.intent")
     def handle_query_IP(self, message):
         addr = get_ifaces()
         dot = self.dialog_renderer.render("dot")
 
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
         elif len(addr) == 1:
             self.enclosure.deactivate_mouth_events()
             iface, ip = addr.popitem()
             self.gui_show(ip)
             ip_spoken = ip.replace(".", " " + dot + " ")
-            self.speak_dialog("my address is",
+            self.speak_dialog("my_address_is",
                               {'ip': ip_spoken}, wait=True)
         else:
             self.enclosure.deactivate_mouth_events()
@@ -71,28 +77,42 @@ class IPSkill(OVOSSkill):
                 ip = addr[iface]
                 self.gui_show(ip)
                 ip_spoken = ip.replace(".", " " + dot + " ")
-                self.speak_dialog("my address on X is Y",
+                self.speak_dialog("my_address_on_x_is_y",
                                   {'interface': iface, 'ip': ip_spoken},
                                   wait=True)
 
         self.enclosure.activate_mouth_events()
         self.enclosure.mouth_reset()
 
+    def scan_wifi(self):
+        """ Shell out to iwlist and parse the ESSID and signal quality of
+        the currently connected network.
+
+        Returns:
+            (str or None) ssid, (str or None) signal quality
+        """
+        ssid = None
+        quality = None
+        scanoutput = check_output(["iwlist", "wlan0", "scan"]).decode("utf-8")
+        for line in scanoutput.splitlines():
+            line = line.strip()
+            if line.startswith("ESSID"):
+                ssid = line.split('"')[1]
+            match = re.search(r"Quality=(\S+)", line)
+            if match:
+                quality = match.group(1)
+        return ssid, quality
+
     def handle_SSID_query(self, message):
         addr = get_ifaces()
         ssid = None
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
 
         # TODO - use bus api for PHAL network manager that reports this instead
         try:
-            scanoutput = check_output(["iwlist", "wlan0", "scan"])
-
-            for line in scanoutput.split():
-                line = line.decode("utf-8")
-                if line[:5] == "ESSID":
-                    ssid = line.split('"')[1]
+            ssid, _ = self.scan_wifi()
         except CalledProcessError:
             # Computer has no wlan0
             pass
@@ -102,13 +122,45 @@ class IPSkill(OVOSSkill):
             else:
                 self.speak_dialog("ethernet.connection")
 
-    @intent_handler(IntentBuilder("LastIPDigitsIntent").require("query").require("IP")
-                    .require("last").optionally("digits"))
+    def handle_wifi_signal_query(self, message):
+        addr = get_ifaces()
+        quality = None
+        if len(addr) == 0:
+            self.speak_dialog("no_network_connection")
+            return
+
+        try:
+            _, quality = self.scan_wifi()
+        except CalledProcessError:
+            # Computer has no wlan0
+            pass
+        finally:
+            if quality:
+                self.speak_dialog("wifi.signal", {"quality": quality})
+            else:
+                self.speak_dialog("ethernet.connection")
+
+    @intent_handler("PublicIPIntent.intent")
+    def handle_query_public_IP(self, message):
+        try:
+            response = requests.get(PUBLIC_IP_URL, timeout=PUBLIC_IP_TIMEOUT)
+            response.raise_for_status()
+            ip = response.text.strip()
+        except requests.exceptions.RequestException:
+            self.speak_dialog("public.ip.error")
+            return
+
+        dot = self.dialog_renderer.render("dot")
+        ip_spoken = ip.replace(".", " " + dot + " ")
+        self.gui_show(ip)
+        self.speak_dialog("my.public.ip", {"ip": ip_spoken})
+
+    @intent_handler("LastIPDigitsIntent.intent")
     def handle_query_last_part_IP(self, message):
         ip = None
         addr = get_ifaces()
         if len(addr) == 0:
-            self.speak_dialog("no network connection")
+            self.speak_dialog("no_network_connection")
             return
 
         self.enclosure.deactivate_mouth_events()
@@ -139,12 +191,12 @@ class IPSkill(OVOSSkill):
     def speak_last_digits(self, ip):
         ip_end = ip.split(".")[-1]
         self.gui_show(ip_end)
-        self.speak_dialog("last digits", data={"digits": ip_end}, wait=True)
+        self.speak_dialog("last_digits", data={"digits": ip_end}, wait=True)
 
     def speak_multiple_last_digits(self, addr):
         for key in addr:
             ip_end = addr[key].split(".")[-1]
             self.gui_show(ip_end)
-            self.speak_dialog("last digits device",
+            self.speak_dialog("last_digits_device",
                               data={'device': key, 'digits': ip_end},
                               wait=True)
