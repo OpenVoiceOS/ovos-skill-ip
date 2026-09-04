@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.3a1) (2026-09-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.2a1...0.3.3a1)
+
+**Merged pull requests:**
+
+- fix: drop residual Adapt IntentBuilder from PublicIPIntent [\#67](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.2a1) (2026-09-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.1a2...0.3.2a1)
