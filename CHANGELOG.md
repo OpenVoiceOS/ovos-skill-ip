@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.4a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.4a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.3a1...0.3.4a1)
+
+**Merged pull requests:**
+
+- fix: ship every en-US intent in all locales [\#70](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/70) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.3a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.3a1) (2026-09-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.2a1...0.3.3a1)
