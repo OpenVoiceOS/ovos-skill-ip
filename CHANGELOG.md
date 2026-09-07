@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.5a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.5a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.4a1...0.3.5a1)
+
+**Merged pull requests:**
+
+- fix: public-IP phrasings carry enough signal to win over the generic intent [\#72](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/72) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.4a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.3.4a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.3.3a1...0.3.4a1)
