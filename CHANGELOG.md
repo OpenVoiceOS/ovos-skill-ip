@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.0a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.5.0a2) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.5.0a1...0.5.0a2)
+
+**Merged pull requests:**
+
+- translate: fill en-US dialog gaps in ten locales [\#80](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/80) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- translate\(da-DK\): consolidated dialog fixes + 3 missing files [\#79](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/79) ([andlo](https://github.com/andlo))
+
 ## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.5.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.4.0a1...0.5.0a1)
