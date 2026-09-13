@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.5.0a3) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.5.0a2...0.5.0a3)
+
+**Merged pull requests:**
+
+- locale: parity dialogs for ca-ES and de-DE [\#84](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/84) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.5.0a2) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.5.0a1...0.5.0a2)
