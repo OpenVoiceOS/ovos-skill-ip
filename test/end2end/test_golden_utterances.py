@@ -8,7 +8,7 @@ own parametrized test item.
 
 Intent match is asserted off the ``ovos.intent.matched`` bus event's
 ``data.intent_name`` field. All intents are registered from ``.intent``
-files (``IPIntent.intent``, ``LastIPDigitsIntent.intent``, etc.), so the
+files (``ip_intent.intent``, ``last_ip_digits_intent.intent``, etc.), so the
 matched name is always the bare filename stem, with no Adapt-vs-filename
 ambiguity to normalize here. Capture ends at
 ``mycroft.skill.handler.start`` (right after intent binding fires, before

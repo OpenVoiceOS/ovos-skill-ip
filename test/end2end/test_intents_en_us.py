@@ -2,14 +2,14 @@
 
 Each case feeds an utterance through a MiniCroft stack running the default
 pipeline (Adapt plus the Padatious-family plugins) and asserts it routes to
-the expected handler. Coverage spans the plain address query (``IPIntent``)
+the expected handler. Coverage spans the plain address query (``ip_intent``)
 across its verb and qualifier phrasings, and the trailing-part query
-(``LastIPDigitsIntent``). Both intents are registered from ``.intent`` files
+(``last_ip_digits_intent``). Both intents are registered from ``.intent`` files
 and route via the Padatious-family pipeline; see
 ``test_intents_en_us_no_adapt.py`` for coverage that pins the pipeline to
 exclude Adapt entirely.
 
-The ``what.ssid.intent`` and ``wifi_signal.intent`` handlers only register
+The ``what_ssid.intent`` and ``wifi_signal.intent`` handlers only register
 when ``iwlist`` is present on the host; their routing coverage is skipped
 when it is absent, which is the case in CI.
 
@@ -96,65 +96,65 @@ class _IntentRoutingMixin:
 
 
 class TestIPIntent(_IntentRoutingMixin, TestCase):
-    """IPIntent — report the full IP address."""
+    """ip_intent — report the full IP address."""
 
     def test_whats_my_ip(self):
-        self._assert_intent("what's my ip", "IPIntent")
+        self._assert_intent("what's my ip", "ip_intent")
 
     def test_how_do_i_find_my_ip(self):
-        self._assert_intent("how do I find my ip", "IPIntent")
+        self._assert_intent("how do I find my ip", "ip_intent")
 
     def test_what_is_my_ip(self):
-        self._assert_intent("what is my ip", "IPIntent")
+        self._assert_intent("what is my ip", "ip_intent")
 
     def test_whats_my_local_ip_address(self):
-        self._assert_intent("what's my local ip address", "IPIntent")
+        self._assert_intent("what's my local ip address", "ip_intent")
 
     def test_give_me_my_ip_address(self):
-        self._assert_intent("give me my ip address", "IPIntent")
+        self._assert_intent("give me my ip address", "ip_intent")
 
     def test_tell_me_my_ip_address(self):
-        self._assert_intent("tell me my ip address", "IPIntent")
+        self._assert_intent("tell me my ip address", "ip_intent")
 
     def test_show_me_my_network_address(self):
-        self._assert_intent("show me my network address", "IPIntent")
+        self._assert_intent("show me my network address", "ip_intent")
 
     def test_public_ip_question_does_not_match_local_intent(self):
-        self._assert_not_intent("what is my public ip", "IPIntent")
+        self._assert_not_intent("what is my public ip", "ip_intent")
 
     def test_external_ip_question_does_not_match_local_intent(self):
-        self._assert_not_intent("what is my external ip address", "IPIntent")
+        self._assert_not_intent("what is my external ip address", "ip_intent")
 
 
 class TestPublicIPIntent(_IntentRoutingMixin, TestCase):
-    """PublicIPIntent — report the internet-facing (public) address."""
+    """public_ip_intent — report the internet-facing (public) address."""
 
     def test_whats_my_public_ip(self):
-        self._assert_intent("what is my public ip", "PublicIPIntent")
+        self._assert_intent("what is my public ip", "public_ip_intent")
 
     def test_whats_my_external_ip_address(self):
-        self._assert_intent("what is my external ip address", "PublicIPIntent")
+        self._assert_intent("what is my external ip address", "public_ip_intent")
 
     def test_tell_me_my_outside_ip(self):
-        self._assert_intent("tell me my outside ip", "PublicIPIntent")
+        self._assert_intent("tell me my outside ip", "public_ip_intent")
 
 
-@skipUnless(which("iwlist"), "what.ssid.intent only registers when iwlist is present")
+@skipUnless(which("iwlist"), "what_ssid.intent only registers when iwlist is present")
 class TestWifiPhrasings(_IntentRoutingMixin, TestCase):
-    """what.ssid.intent — additional phrasings for the wifi/network name."""
+    """what_ssid.intent — additional phrasings for the wifi/network name."""
 
     def test_whats_my_wifi_called(self):
-        self._assert_intent("what is my wifi called", "what.ssid.intent")
+        self._assert_intent("what is my wifi called", "what_ssid.intent")
 
     def test_whats_my_wifi_called_again(self):
-        self._assert_intent("what is my wifi called again", "what.ssid.intent")
+        self._assert_intent("what is my wifi called again", "what_ssid.intent")
 
     def test_can_you_please_tell_me_the_wifi_name(self):
         self._assert_intent("can you please tell me the wifi name",
-                             "what.ssid.intent")
+                             "what_ssid.intent")
 
     def test_what_network_am_i_on(self):
-        self._assert_intent("what network am I on", "what.ssid.intent")
+        self._assert_intent("what network am I on", "what_ssid.intent")
 
 
 @skipUnless(which("iwlist"), "wifi_signal.intent only registers when iwlist is present")
@@ -169,16 +169,16 @@ class TestWifiSignalIntent(_IntentRoutingMixin, TestCase):
 
 
 class TestLastIPDigitsIntent(_IntentRoutingMixin, TestCase):
-    """LastIPDigitsIntent — report only the trailing part of the address."""
+    """last_ip_digits_intent — report only the trailing part of the address."""
 
     def test_last_digits_of_my_ip(self):
-        self._assert_intent("what are the last digits of my ip", "LastIPDigitsIntent")
+        self._assert_intent("what are the last digits of my ip", "last_ip_digits_intent")
 
     def test_read_the_last_part_of_my_ip(self):
-        self._assert_intent("read the last part of my ip", "LastIPDigitsIntent")
+        self._assert_intent("read the last part of my ip", "last_ip_digits_intent")
 
     def test_read_me_the_last_part_of_my_ip(self):
-        self._assert_intent("read me the last part of my ip", "LastIPDigitsIntent")
+        self._assert_intent("read me the last part of my ip", "last_ip_digits_intent")
 
     def test_final_digits_of_my_ip_address(self):
-        self._assert_intent("tell me the final digits of my ip address", "LastIPDigitsIntent")
+        self._assert_intent("tell me the final digits of my ip address", "last_ip_digits_intent")

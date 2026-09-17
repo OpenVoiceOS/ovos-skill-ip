@@ -29,7 +29,7 @@ class TestPublicIP(unittest.TestCase):
             skill.handle_query_public_IP(MagicMock())
         skill.speak_dialog.assert_called_once()
         dialog, data = skill.speak_dialog.call_args[0][0], skill.speak_dialog.call_args[0][1]
-        self.assertEqual(dialog, "my.public.ip")
+        self.assertEqual(dialog, "my_public_ip")
         self.assertEqual(data["ip"], "8 dot 8 dot 8 dot 8")
 
     def test_public_ip_network_error_speaks_error_dialog(self):
@@ -37,14 +37,14 @@ class TestPublicIP(unittest.TestCase):
         with patch("ovos_skill_ip.requests.get",
                    side_effect=requests.exceptions.ConnectionError()):
             skill.handle_query_public_IP(MagicMock())
-        skill.speak_dialog.assert_called_once_with("public.ip.error")
+        skill.speak_dialog.assert_called_once_with("public_ip_error")
 
     def test_public_ip_timeout_speaks_error_dialog(self):
         skill = _make_skill()
         with patch("ovos_skill_ip.requests.get",
                    side_effect=requests.exceptions.Timeout()):
             skill.handle_query_public_IP(MagicMock())
-        skill.speak_dialog.assert_called_once_with("public.ip.error")
+        skill.speak_dialog.assert_called_once_with("public_ip_error")
 
 
 class TestWifiSignal(unittest.TestCase):
@@ -67,14 +67,14 @@ class TestWifiSignal(unittest.TestCase):
         with patch("ovos_skill_ip.get_ifaces", return_value={"wlan0": "192.168.1.5"}), \
              patch("ovos_skill_ip.check_output", return_value=self.IWLIST_OUTPUT):
             skill.handle_wifi_signal_query(MagicMock())
-        skill.speak_dialog.assert_called_once_with("wifi.signal", {"quality": "70/70"})
+        skill.speak_dialog.assert_called_once_with("wifi_signal", {"quality": "70/70"})
 
     def test_wifi_signal_query_falls_back_when_no_signal_data(self):
         skill = _make_skill()
         with patch("ovos_skill_ip.get_ifaces", return_value={"wlan0": "192.168.1.5"}), \
              patch("ovos_skill_ip.check_output", return_value=b"wlan0     No scan results\n"):
             skill.handle_wifi_signal_query(MagicMock())
-        skill.speak_dialog.assert_called_once_with("ethernet.connection")
+        skill.speak_dialog.assert_called_once_with("ethernet_connection")
 
     def test_wifi_signal_query_no_network(self):
         skill = _make_skill()

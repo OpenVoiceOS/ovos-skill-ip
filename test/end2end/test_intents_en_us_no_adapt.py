@@ -1,7 +1,7 @@
 """Adapt-less end-to-end intent-routing test for ovos-skill-ip (en-US).
 
 Pins MiniCroft to the padacioso pipeline only (no Adapt plugins in the
-stack) to prove ``IPIntent``/``LastIPDigitsIntent`` are registered as
+stack) to prove ``ip_intent``/``last_ip_digits_intent`` are registered as
 ``.intent`` (padatious-family) intents rather than Adapt intents.
 
 Run: pytest test/end2end/test_intents_en_us_no_adapt.py -v
@@ -56,7 +56,7 @@ class TestNoAdaptIntentRouting(TestCase):
         )
 
     def test_what_is_my_ip_address(self):
-        self._assert_intent("what is my ip address", "IPIntent")
+        self._assert_intent("what is my ip address", "ip_intent")
 
     def test_last_digits_of_my_ip(self):
-        self._assert_intent("what are the last digits of my ip", "LastIPDigitsIntent")
+        self._assert_intent("what are the last digits of my ip", "last_ip_digits_intent")
