@@ -51,12 +51,12 @@ class IPSkill(OVOSSkill):
     def initialize(self):
         # Only register the SSID intents if iwlist is installed on the system
         if which("iwlist"):  # TODO - use bus events to get this info, not iwlist
-            self.register_intent_file("what.ssid.intent",
+            self.register_intent_file("what_ssid.intent",
                                       self.handle_SSID_query)
             self.register_intent_file("wifi_signal.intent",
                                       self.handle_wifi_signal_query)
 
-    @intent_handler("IPIntent.intent")
+    @intent_handler("ip.intent")
     def handle_query_IP(self, message):
         addr = get_ifaces()
         dot = self.dialog_renderer.render("dot")
@@ -120,7 +120,7 @@ class IPSkill(OVOSSkill):
             if ssid:
                 self.speak(ssid)
             else:
-                self.speak_dialog("ethernet.connection")
+                self.speak_dialog("ethernet_connection")
 
     def handle_wifi_signal_query(self, message):
         addr = get_ifaces()
@@ -136,26 +136,26 @@ class IPSkill(OVOSSkill):
             pass
         finally:
             if quality:
-                self.speak_dialog("wifi.signal", {"quality": quality})
+                self.speak_dialog("wifi_signal_quality", {"quality": quality})
             else:
-                self.speak_dialog("ethernet.connection")
+                self.speak_dialog("ethernet_connection")
 
-    @intent_handler("PublicIPIntent.intent")
+    @intent_handler("public_ip.intent")
     def handle_query_public_IP(self, message):
         try:
             response = requests.get(PUBLIC_IP_URL, timeout=PUBLIC_IP_TIMEOUT)
             response.raise_for_status()
             ip = response.text.strip()
         except requests.exceptions.RequestException:
-            self.speak_dialog("public.ip.error")
+            self.speak_dialog("public_ip_error")
             return
 
         dot = self.dialog_renderer.render("dot")
         ip_spoken = ip.replace(".", " " + dot + " ")
         self.gui_show(ip)
-        self.speak_dialog("my.public.ip", {"ip": ip_spoken})
+        self.speak_dialog("my_public_ip", {"ip": ip_spoken})
 
-    @intent_handler("LastIPDigitsIntent.intent")
+    @intent_handler("last_ip_digits.intent")
     def handle_query_last_part_IP(self, message):
         ip = None
         addr = get_ifaces()
