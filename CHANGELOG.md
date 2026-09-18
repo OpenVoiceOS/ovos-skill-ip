@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.1a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.6.1a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.6.0a1...0.6.1a1)
+
+**Merged pull requests:**
+
+- fix: resource names per OVOS-INTENT-2 §2 [\#92](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/92) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.6.0a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.5.0a3...0.6.0a1)
