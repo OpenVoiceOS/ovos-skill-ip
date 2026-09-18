@@ -16,3 +16,6 @@ dist
 .theia
 .venv/
 
+.msg.txt
+.body.md
+install*.log

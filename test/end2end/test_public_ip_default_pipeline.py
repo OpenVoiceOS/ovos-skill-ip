@@ -1,17 +1,17 @@
 """Full default-pipeline routing test for the public-ip questions (en-US).
 
 Live validation found "what is my public ip" answered by common_qa with a
-docker-bridge address instead of PublicIPIntent. The root cause is pipeline
+docker-bridge address instead of public_ip.intent. The root cause is pipeline
 tier ordering: the default pipeline runs ``padatious-high`` before
 ``adapt-high``/``adapt-medium``, and before any high-priority fallback
-(common_qa). PublicIPIntent's Adapt confidence for this exact phrasing
+(common_qa). public_ip.intent's Adapt confidence for this exact phrasing
 (``query``+``ip``+``public``, no ``address`` token) is only ~0.6 - below the
 Adapt "high" tier cutoff, so it only ever matched at ``adapt-medium``, a
 stage that runs AFTER ``ovos-fallback-pipeline-plugin-high`` (where common_qa
 lives). A high-priority fallback claiming the utterance first meant
-PublicIPIntent's own (correct) answer never got a chance to run.
+public_ip.intent's own (correct) answer never got a chance to run.
 
-PublicIPIntent.intent gives the mandated phrasings a padatious-family match that
+Publicip.intent gives the mandated phrasings a padatious-family match that
 resolves at ``padatious-high`` - the very first content-matching stage in the
 default pipeline, before Adapt or any fallback ever sees the utterance.
 
@@ -97,19 +97,19 @@ class TestPublicIPDefaultPipeline(TestCase):
         )
 
     def test_whats_my_public_ip_resolves_before_fallback_high(self):
-        # PublicIPIntent.intent (padatious-high) must claim this, not the
-        # lower-tier Adapt PublicIPIntent (adapt-medium, conf ~0.6).
-        self._assert_intent("what is my public ip", "PublicIPIntent")
+        # Publicip.intent (padatious-high) must claim this, not the
+        # lower-tier Adapt public_ip.intent (adapt-medium, conf ~0.6).
+        self._assert_intent("what is my public ip", "public_ip")
 
     def test_whats_my_external_ip_resolves_before_fallback_high(self):
-        self._assert_intent("what's my external ip address", "PublicIPIntent")
+        self._assert_intent("what's my external ip address", "public_ip")
 
     def test_bare_local_ip_question_unaffected(self):
-        # negative: a plain local-ip question must still route to IPIntent,
-        # not PublicIPIntent.intent, on the same pipeline.
+        # negative: a plain local-ip question must still route to ip.intent,
+        # not Publicip.intent, on the same pipeline.
         matched = []
         handler = lambda msg: matched.append(msg)
-        self.minicroft.bus.on(f"{SKILL_ID}:PublicIPIntent", handler)
+        self.minicroft.bus.on(f"{SKILL_ID}:public_ip.intent", handler)
         try:
             session = Session("e2e-default-pipeline-local")
             session.lang = LANG
@@ -121,7 +121,7 @@ class TestPublicIPDefaultPipeline(TestCase):
             ))
             time.sleep(3)
         finally:
-            self.minicroft.bus.remove(f"{SKILL_ID}:PublicIPIntent", handler)
+            self.minicroft.bus.remove(f"{SKILL_ID}:public_ip.intent", handler)
         self.assertFalse(
-            matched, "\"what is my ip\" incorrectly routed to PublicIPIntent.intent"
+            matched, "\"what is my ip\" incorrectly routed to Publicip.intent"
         )
