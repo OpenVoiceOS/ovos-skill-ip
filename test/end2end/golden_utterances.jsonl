@@ -1,4 +1,0 @@
-{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "what is my IP", "intent_method": "handle_query_IP", "intent_label": "ip", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false}
-{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "what are the last digits of my IP", "intent_method": "handle_query_last_part_IP", "intent_label": "last_ip_digits", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false}
-{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "what are the final digits of my IP", "intent_method": "handle_query_last_part_IP", "intent_label": "last_ip_digits", "intent_type": "padatious", "expected_messages": ["speak"], "needs_manual": false}
-{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "what is my public ip", "intent_method": "handle_query_public_IP", "intent_label": "public_ip", "intent_type": "adapt", "expected_messages": ["speak"], "needs_manual": false}

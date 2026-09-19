@@ -1,0 +1,8 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaká je moje IP adresa", "lang": "cs-CZ", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "co je moje IP", "lang": "cs-CZ", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "řekni mi mou IP adresu", "lang": "cs-CZ", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaká je moje veřejná IP adresa", "lang": "cs-CZ", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaká je moje veřejná IP", "lang": "cs-CZ", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "řekni mi mou externí IP adresu", "lang": "cs-CZ", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaké jsou poslední číslice mojí IP adresy", "lang": "cs-CZ", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "řekni mi poslední čísla mé IP", "lang": "cs-CZ", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
