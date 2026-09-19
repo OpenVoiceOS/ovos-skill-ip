@@ -1,0 +1,9 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quina és la meva adreça ip", "lang": "ca-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quina ip tinc", "lang": "ca-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "digues-me la adreça i p", "lang": "ca-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quina és la meva adreça ip pública", "lang": "ca-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ip pública", "lang": "ca-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quina ip pública tinc", "lang": "ca-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quins són els dígits finals de la meva adreça ip", "lang": "ca-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "com acaba la meva adreça ip", "lang": "ca-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "digues-me els nombres del final de la meva ip", "lang": "ca-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}

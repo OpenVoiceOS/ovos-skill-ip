@@ -1,0 +1,9 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "wat is mijn lokale ip adres", "lang": "nl-NL", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "vertel me mijn lokale ip adres", "lang": "nl-NL", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "hoe vind ik mijn ip adres", "lang": "nl-NL", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "wat is mijn publieke ip adres", "lang": "nl-NL", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "publieke ip adres", "lang": "nl-NL", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "vertel me mijn externe ip", "lang": "nl-NL", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "wat zijn de laatste cijfers van mijn ip adres", "lang": "nl-NL", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "vertel me de laatste cijfers van mijn ip adres", "lang": "nl-NL", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "wat zijn de eind nummers van mijn ip", "lang": "nl-NL", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
