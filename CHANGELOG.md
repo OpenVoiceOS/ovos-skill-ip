@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.7.1a1) (2026-09-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.7.0a1...0.7.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): close whitespace and doubled braces in slot placeholders [\#81](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/81) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.7.0a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.6.1a1...0.7.0a1)
