@@ -3,8 +3,7 @@
 Every locale under ``locale/`` gets its own
 ``golden_utterances_<lang>.jsonl``. Each row's utterance is a direct
 mechanical expansion of that locale's own ``ip.intent`` /
-``public_ip.intent`` / ``last_ip_digits.intent`` /
-``what_ssid.intent`` / ``wifi_signal.intent`` padatious template:
+``public_ip.intent`` / ``last_ip_digits.intent`` padatious template:
 ``(a|b|c)`` word-choice groups are resolved to one alternative,
 ``[optional]`` tokens (including an internal ``a|b`` choice) are kept
 or dropped. No translation, no drafted prose.
@@ -47,6 +46,10 @@ NEGATIVE_UTTERANCES = [
     ("what's the weather like today", "en-US", "ovos-skill-weather.openvoiceos"),
     ("tell me a joke", "en-US", "ovos-skill-icanhazdadjokes.openvoiceos"),
     ("set the volume to 50 percent", "en-US", "ovos-skill-volume.openvoiceos"),
+    ("what is your cpu usage", "en-US", None),
+    ("tell me your kernel version", "en-US", None),
+    ("what is my current location", "en-US", None),
+    ("where is the international space station", "en-US", None),
 ]
 
 
