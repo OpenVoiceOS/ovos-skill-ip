@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.7.1a2) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.7.1a1...0.7.1a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#91](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/91) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.1a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.7.1a1) (2026-09-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.7.0a1...0.7.1a1)
