@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.8.0a1...0.9.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill kab, pt-BR and pt-PT gaps against en-US [\#89](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/89) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.0a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.8.0a1) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.7.1a3...0.8.0a1)
