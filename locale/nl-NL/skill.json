@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "IP-adres van het apparaat",
+  "description": "Informatie over de netwerkverbinding",
+  "examples": [
+    "Wat is je netwerkadres?",
+    "Wat is je IP-adres?",
+    "Vertel me je IP-adres",
+    "Vertel me je netwerkadres",
+    "Met welk netwerk ben je verbonden?"
+  ],
+  "tags": [
+    "IP-adres",
+    "IPadres",
+    "netwerkadres",
+    "netwerk",
+    "systeem"
+  ]
+}

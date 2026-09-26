@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Enhetens IP-adress",
+  "description": "Information om nätverksanslutning",
+  "examples": [
+    "Vad är din nätverksadress?",
+    "Vad är din IP-adress?",
+    "Berätta din IP-adress",
+    "Berätta din nätverksadress",
+    "Vilket nätverk är du ansluten till?"
+  ],
+  "tags": [
+    "IP-adress",
+    "IPadress",
+    "nätverksadress",
+    "nätverk",
+    "system"
+  ]
+}

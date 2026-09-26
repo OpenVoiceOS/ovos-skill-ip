@@ -1,0 +1,8 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "que é o meu enderezo IP", "lang": "gl-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cal é o meu IP", "lang": "gl-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dime é o meu enderezo de rede", "lang": "gl-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cal é o meu enderezo IP público", "lang": "gl-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "IP pública", "lang": "gl-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cal é o meu enderezo IP visto desde fóra en internet", "lang": "gl-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dime os últimos díxitos do meu enderezo IP", "lang": "gl-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cales son os últimos números do meu IP", "lang": "gl-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
