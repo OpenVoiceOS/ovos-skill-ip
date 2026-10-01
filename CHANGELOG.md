@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a3) (2026-10-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a2...0.9.0a3)
+
+**Merged pull requests:**
+
+- fix\(locale\): natural Spanish for es-CO and es-ES what\_ssid.intent [\#106](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/106) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a2) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a1...0.9.0a2)
