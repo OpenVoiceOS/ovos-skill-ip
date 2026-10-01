@@ -1,3 +1,15 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой у меня IP адрес", "lang": "ru-RU", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "скажи мне мой публичный IP", "lang": "ru-RU", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какие последние цифры моего IP адреса", "lang": "ru-RU", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой у меня локальный IP адрес", "lang": "ru-RU", "intent_label": "ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой мой локальный IP адрес", "lang": "ru-RU", "intent_label": "ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "скажи мне последние цифры моего IP адреса", "lang": "ru-RU", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "чем заканчивается мой IP адрес", "lang": "ru-RU", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой мой публичный IP адрес", "lang": "ru-RU", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "публичный IP адрес", "lang": "ru-RU", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "к какой сети ты подключён", "lang": "ru-RU", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какую сеть ты используешь", "lang": "ru-RU", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "к какой сети я подключён", "lang": "ru-RU", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой у меня сигнал wifi", "lang": "ru-RU", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какая сила сигнала wifi", "lang": "ru-RU", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "насколько хорош мой wifi", "lang": "ru-RU", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

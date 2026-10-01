@@ -1,3 +1,15 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی من چیست", "lang": "fa-IR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی عمومی من چیست", "lang": "fa-IR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "رقم های آخر آی پی من چیست", "lang": "fa-IR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی محلی من چیست", "lang": "fa-IR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی محلی من را بگو", "lang": "fa-IR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "رقم های آخر آی پی من را بگو", "lang": "fa-IR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی من به چه عددی ختم می شود", "lang": "fa-IR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی عمومی من را بگو", "lang": "fa-IR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی عمومی", "lang": "fa-IR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "به چه شبکه ای وصل هستی", "lang": "fa-IR", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "از چه شبکه ای استفاده می کنی", "lang": "fa-IR", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "به چه شبکه ای وصل هستم", "lang": "fa-IR", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "قدرت سیگنال وای فای من چقدر است", "lang": "fa-IR", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "سیگنال وای فای من چقدر قوی است", "lang": "fa-IR", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "اتصال وای فای من چقدر خوب است", "lang": "fa-IR", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

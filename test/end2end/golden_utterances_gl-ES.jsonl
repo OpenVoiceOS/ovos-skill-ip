@@ -6,3 +6,10 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cal é o meu enderezo IP visto desde fóra en internet", "lang": "gl-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dime os últimos díxitos do meu enderezo IP", "lang": "gl-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cales son os últimos números do meu IP", "lang": "gl-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dime os últimos díxitos do meu IP", "lang": "gl-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "a que rede estás usando", "lang": "gl-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "a que rede estás conectado", "lang": "gl-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "a que ssid estás usando", "lang": "gl-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "que forte é o meu sinal de wifi", "lang": "gl-ES", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "como está a miña conexión wifi", "lang": "gl-ES", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "que tal vai o meu wifi", "lang": "gl-ES", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

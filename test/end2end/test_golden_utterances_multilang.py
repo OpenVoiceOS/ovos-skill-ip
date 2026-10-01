@@ -1,12 +1,16 @@
 """Multilingual golden-utterance end-to-end coverage for ovos-skill-ip.
 
 Every locale under ``locale/`` gets its own
-``golden_utterances_<lang>.jsonl``. Each row's utterance is a direct
-mechanical expansion of that locale's own ``ip.intent`` /
-``public_ip.intent`` / ``last_ip_digits.intent`` padatious template:
+``golden_utterances_<lang>.jsonl``, and every file present runs, including
+rows marked ``needs_manual``. Each row's utterance is a direct mechanical
+expansion of one of that locale's own ``.intent`` padatious templates:
 ``(a|b|c)`` word-choice groups are resolved to one alternative,
 ``[optional]`` tokens (including an internal ``a|b`` choice) are kept
 or dropped. No translation, no drafted prose.
+
+The skill registers ``what_ssid`` and ``wifi_signal`` only when ``iwlist``
+is on ``PATH``, so each locale class puts a stub ``iwlist`` first on
+``PATH`` while its MiniCroft runs.
 
 One ``MiniCroft`` is booted per locale (class-scoped, torn down after),
 mirroring the other skills' multilang suites in this batch and
@@ -16,6 +20,8 @@ Run:
     uv run pytest test/end2end/test_golden_utterances_multilang.py -v
 """
 import json
+import os
+import tempfile
 from pathlib import Path
 from unittest import TestCase
 
@@ -36,11 +42,10 @@ PIPELINE = [
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = [
-    "en-US", "ca-ES", "cs-CZ", "da-DK", "de-DE", "es-ES", "eu-ES",
-    "fr-FR", "gl-ES", "it-IT", "kab", "nl-NL", "oc-FR", "pl-PL",
-    "pt-BR", "pt-PT", "sv-SE",
-]
+LANGS = sorted(
+    p.stem.removeprefix("golden_utterances_")
+    for p in END2END_DIR.glob("golden_utterances_*.jsonl")
+)
 
 NEGATIVE_UTTERANCES = [
     ("what's the weather like today", "en-US", "ovos-skill-weather.openvoiceos"),
@@ -61,10 +66,7 @@ def _load_rows(lang):
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
     return rows
 
 
@@ -95,12 +97,20 @@ def _make_locale_test_case(lang):
 
         @classmethod
         def setUpClass(cls):
+            cls._stub_dir = tempfile.TemporaryDirectory()
+            stub = Path(cls._stub_dir.name) / "iwlist"
+            stub.write_text("#!/bin/sh\nexit 0\n")
+            stub.chmod(0o755)
+            cls._old_path = os.environ.get("PATH", "")
+            os.environ["PATH"] = f"{cls._stub_dir.name}{os.pathsep}{cls._old_path}"
             cls.minicroft = get_minicroft([SKILL_ID], max_wait=180, lang=lang)
 
         @classmethod
         def tearDownClass(cls):
             if getattr(cls, "minicroft", None):
                 cls.minicroft.stop()
+            os.environ["PATH"] = cls._old_path
+            cls._stub_dir.cleanup()
 
         def _check_row(self, row):
             expected = f"{SKILL_ID}:{row['intent_label']}"
@@ -149,3 +159,11 @@ del _lang, _cls  # for-loop variables leak into module globals; without this
 # deletion pytest also collects a spurious extra test class literally named
 # "_cls" (bound to whichever locale ran last), which boots a second,
 # redundant MiniCroft for that locale under a different collected name.
+
+
+def test_every_shipping_locale_has_a_golden_file():
+    golden = {p.stem.split("_", 2)[2] for p in END2END_DIR.glob("golden_utterances_*.jsonl")}
+    locale_root = Path(__file__).parents[2] / "locale"
+    shipping = {d.name for d in locale_root.iterdir()
+                if d.is_dir() and any(d.rglob("*.intent"))}
+    assert golden == shipping, f"golden files {sorted(golden ^ shipping)} differ from shipping locales"
