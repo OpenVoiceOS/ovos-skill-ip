@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی من چیست", "lang": "fa-IR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "آی پی عمومی من چیست", "lang": "fa-IR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "رقم های آخر آی پی من چیست", "lang": "fa-IR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}

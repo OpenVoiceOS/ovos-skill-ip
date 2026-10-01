@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какой у меня IP адрес", "lang": "ru-RU", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "скажи мне мой публичный IP", "lang": "ru-RU", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "какие последние цифры моего IP адреса", "lang": "ru-RU", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}

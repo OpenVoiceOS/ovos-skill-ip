@@ -1,0 +1,9 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "qual é o meu endereço IP", "lang": "pt-BR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "diz o meu IP", "lang": "pt-BR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "mostra o meu endereço de rede", "lang": "pt-BR", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "qual é o meu endereço IP público", "lang": "pt-BR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "IP público", "lang": "pt-BR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "qual é o meu endereço IP visto de fora na internet", "lang": "pt-BR", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "diz os últimos dígitos do meu endereço IP", "lang": "pt-BR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "a parte final do meu endereço IP", "lang": "pt-BR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quais são os últimos números do meu IP", "lang": "pt-BR", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}

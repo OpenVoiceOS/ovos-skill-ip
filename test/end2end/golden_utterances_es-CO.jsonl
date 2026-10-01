@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cuál es mi dirección IP", "lang": "es-CO", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dime mi IP externa", "lang": "es-CO", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "cuál es mi dirección IP pública", "lang": "es-CO", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false, "machine_generated": true}

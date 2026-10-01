@@ -1,0 +1,9 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t wanwa IP-inu", "lang": "kab", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ini-yi-d wanwa IP-inu", "lang": "kab", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t tansa-w n IP", "lang": "kab", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t IP-inu azayez", "lang": "kab", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ini-yi-d IP-inu azayez", "lang": "kab", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t tansa-w n IP azayez", "lang": "kab", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-tent tuccḍiwin taggara n IP-inu", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-tent tuccḍiwin taggara n tansa-w n IP", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ini-yi-d tuccḍiwin taggara n IP-inu", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}

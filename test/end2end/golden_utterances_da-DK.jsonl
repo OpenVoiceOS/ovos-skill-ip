@@ -1,0 +1,8 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "hvad er min IP-adresse", "lang": "da-DK", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "fortæl mig min IP", "lang": "da-DK", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "vis mig min netværksadresse", "lang": "da-DK", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "hvad er min offentlige IP-adresse", "lang": "da-DK", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "min offentlige IP", "lang": "da-DK", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "hvad er min eksterne IP-adresse", "lang": "da-DK", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "hvad er de sidste cifre i min IP-adresse", "lang": "da-DK", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "fortæl mig de sidste tal af min IP", "lang": "da-DK", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}

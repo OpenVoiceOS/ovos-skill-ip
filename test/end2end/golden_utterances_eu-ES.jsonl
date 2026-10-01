@@ -1,0 +1,8 @@
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zer da nire IP helbidea", "lang": "eu-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "esan nire IP", "lang": "eu-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "erakutsi nire sarearen helbidea", "lang": "eu-ES", "intent_label": "ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zein da nire IP publikoa", "lang": "eu-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "esan iezadazu nire IP publikoa", "lang": "eu-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "IP publikoa", "lang": "eu-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "esan nire IP helbidearen azken digituak", "lang": "eu-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zer dira nire IP azken zenbakiak", "lang": "eu-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
