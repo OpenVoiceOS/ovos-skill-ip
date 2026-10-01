@@ -6,3 +6,10 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "řekni mi mou externí IP adresu", "lang": "cs-CZ", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaké jsou poslední číslice mojí IP adresy", "lang": "cs-CZ", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "řekni mi poslední čísla mé IP", "lang": "cs-CZ", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaké jsou poslední číslice mojí IP", "lang": "cs-CZ", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "na jakou síť používáš", "lang": "cs-CZ", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "na jakou síť jsi připojen", "lang": "cs-CZ", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "na jakou síť jsi", "lang": "cs-CZ", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jak silný je můj wifi signál", "lang": "cs-CZ", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jaká je síla mého wifi připojení", "lang": "cs-CZ", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "jak dobré je moje wifi", "lang": "cs-CZ", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

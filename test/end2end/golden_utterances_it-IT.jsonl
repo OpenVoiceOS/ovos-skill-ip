@@ -7,3 +7,8 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quali sono le ultime cifre del mio indirizzo IP", "lang": "it-IT", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "come finisce il mio indirizzo IP", "lang": "it-IT", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "dimmi le ultime numeri del mio IP", "lang": "it-IT", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "a quale rete sei connesso", "lang": "it-IT", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quale rete stai usando", "lang": "it-IT", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "qual è il nome della rete wifi", "lang": "it-IT", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "quanto è forte il mio segnale wifi", "lang": "it-IT", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "com'è la mia connessione wifi", "lang": "it-IT", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

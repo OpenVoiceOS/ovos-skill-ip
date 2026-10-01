@@ -6,3 +6,9 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "IP publikoa", "lang": "eu-ES", "intent_label": "public_ip", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "esan nire IP helbidearen azken digituak", "lang": "eu-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zer dira nire IP azken zenbakiak", "lang": "eu-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "esan nire IP helbidearen azken zenbakiak", "lang": "eu-ES", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zein sare ari zara erabiltzen konektatzeko", "lang": "eu-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zein ssid ari zara erabiltzen konektatzeko", "lang": "eu-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zein wifi ari zara erabiltzen konektatzeko", "lang": "eu-ES", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "zein indartsua da nire wifi seinalea", "lang": "eu-ES", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "nolakoa da nire wifi konexioa", "lang": "eu-ES", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}

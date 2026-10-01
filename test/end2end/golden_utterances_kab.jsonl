@@ -7,3 +7,9 @@
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-tent tuccḍiwin taggara n IP-inu", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-tent tuccḍiwin taggara n tansa-w n IP", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
 {"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ini-yi-d tuccḍiwin taggara n IP-inu", "lang": "kab", "intent_label": "last_ip_digits", "intent_type": "padatious", "needs_manual": false}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "ar wanwa aẓeṭṭa i teqqneḍ?", "lang": "kab", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "deg wanwa aẓeṭṭa i telliḍ?", "lang": "kab", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "anwa aẓeṭṭa i tseqdaceḍ?", "lang": "kab", "intent_label": "what_ssid", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t uzmul n wifi-inu", "lang": "kab", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "amek yella wanzeg n wifi-inu", "lang": "kab", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-ip.openvoiceos", "utterance": "d acu-t wanzeg n wifi-inu", "lang": "kab", "intent_label": "wifi_signal", "intent_type": "padatious", "needs_manual": true, "machine_generated": true}
