@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Gailuaren IP helbidea",
+  "description": "Sareko konexioaren informazioa",
+  "examples": [
+    "Zein da zure sareko helbidea?",
+    "Zein da zure IP helbidea?",
+    "Esadazu zure IP helbidea",
+    "Esadazu zure sareko helbidea",
+    "Zein sareri konektatuta zaude?"
+  ],
+  "tags": [
+    "IP helbidea",
+    "IP helbidea",
+    "sareko helbidea",
+    "sarea",
+    "sistema"
+  ]
+}
