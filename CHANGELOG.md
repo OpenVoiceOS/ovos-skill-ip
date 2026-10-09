@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a4) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a3...0.9.0a4)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#105](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/105) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a3) (2026-10-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a2...0.9.0a3)
@@ -243,6 +251,182 @@
 
 - es-es/translate [\#36](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/36) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 - gl/translate [\#35](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/35) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.8](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.8) (2025-05-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.8a2...0.2.8)
+
+**Merged pull requests:**
+
+- Release 0.2.8a2 [\#34](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/34) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.8a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.8a2) (2025-05-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.8a1...0.2.8a2)
+
+**Merged pull requests:**
+
+- fix: standardize urls / skill-id / pypi-name [\#33](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/33) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.2.8a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.8a1) (2025-02-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.7...0.2.8a1)
+
+## [0.2.7](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.7) (2025-01-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.7a1...0.2.7)
+
+## [0.2.7a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.7a1) (2024-12-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6...0.2.7a1)
+
+**Merged pull requests:**
+
+- refactor: drop custom QML [\#29](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/29) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.2.6](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6a4...0.2.6)
+
+**Merged pull requests:**
+
+- Release 0.2.6a5 [\#28](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/28) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.6a4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6a4) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6a5...0.2.6a4)
+
+## [0.2.6a5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6a5) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6a3...0.2.6a5)
+
+**Merged pull requests:**
+
+- import galician and basque translations [\#27](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/27) ([JarbasAl](https://github.com/JarbasAl))
+- de-de/translate [\#24](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/24) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.6a3](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6a3) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6a1...0.2.6a3)
+
+**Merged pull requests:**
+
+- Release 0.2.6a3 [\#26](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/26) ([github-actions[bot]](https://github.com/apps/github-actions))
+- import galician translations [\#25](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/25) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.2.6a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6a1) (2024-11-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.6a2...0.2.6a1)
+
+## [0.2.6a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.6a2) (2024-11-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.5...0.2.6a2)
+
+**Merged pull requests:**
+
+- Release 0.2.6a2 [\#23](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/23) ([github-actions[bot]](https://github.com/apps/github-actions))
+- da-dk/translate [\#22](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/22) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#21](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/21) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.5) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.5a1...0.2.5)
+
+**Merged pull requests:**
+
+- Release 0.2.5a1 [\#20](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/20) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.5a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.5a1) (2024-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.4...0.2.5a1)
+
+**Merged pull requests:**
+
+- da-dk/translate [\#17](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.4) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.4a1...0.2.4)
+
+**Merged pull requests:**
+
+- Release 0.2.4a1 [\#19](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/19) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.4a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.4a1) (2024-11-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.3a1...0.2.4a1)
+
+**Merged pull requests:**
+
+- fix: add missing skill.json [\#18](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/18) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.3a1) (2024-11-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.2...0.2.3a1)
+
+**Merged pull requests:**
+
+- Release 0.2.3a1 [\#16](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/16) ([github-actions[bot]](https://github.com/apps/github-actions))
+- de-de/translate [\#15](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/15) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.2) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.2a2...0.2.2)
+
+**Merged pull requests:**
+
+- Release 0.2.2a2 [\#14](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/14) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.2a2](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.2a2) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.2a1...0.2.2a2)
+
+## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.2a1) (2024-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.1...0.2.2a1)
+
+**Merged pull requests:**
+
+- Add Catalan translation [\#13](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/13) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#12](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/12) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan translation [\#11](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/11) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [0.2.1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.1) (2024-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.1a1...0.2.1)
+
+**Merged pull requests:**
+
+- Release 0.2.1a1 [\#10](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/10) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.1a1) (2024-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.1.0...0.2.1a1)
+
+**Merged pull requests:**
+
+- fix/ip\_render [\#9](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/9) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.0](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.1.0) (2024-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.0...0.1.0)
+
+## [0.2.0](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.2.0) (2024-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/V0.1.0...0.2.0)
+
+**Implemented enhancements:**
+
+- fix: make digits optionally + remove qml extension [\#7](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/7) ([PocketMiner82](https://github.com/PocketMiner82))
+
+## [V0.1.0](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/V0.1.0) (2024-09-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/1c814380917dfc0050ce8cb32ac92471b3fe4815...V0.1.0)
+
+**Merged pull requests:**
+
+- pt-pt/translate-intents [\#6](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/6) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- pt-pt/translate-vocabs [\#5](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/5) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
