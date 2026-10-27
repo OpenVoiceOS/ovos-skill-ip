@@ -1,98 +1,51 @@
 """End-to-end intent-routing tests for ovos-skill-ip (en-US).
 
-Each case feeds an utterance through a MiniCroft stack running the default
-pipeline (Adapt plus the Padatious-family plugins) and asserts it routes to
-the expected handler. Coverage spans the plain address query (``ip.intent``)
-across its verb and qualifier phrasings, and the trailing-part query
-(``last_ip_digits.intent``). Both intents are registered from ``.intent`` files
-and route via the Padatious-family pipeline; see
-``test_intents_en_us_no_adapt.py`` for coverage that pins the pipeline to
-exclude Adapt entirely.
-
 The ``what_ssid.intent`` and ``wifi_signal.intent`` handlers only register
-when ``iwlist`` is present on the host; their routing coverage is skipped
-when it is absent, which is the case in CI.
-
-Run: pytest test/end2end/ -v
+when ``iwlist`` is present on the host; their routing tests skip without it.
 """
-import time
 from shutil import which
 from unittest import TestCase, skipUnless
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-ip.openvoiceos"
 LANG = "en-US"
 
-PIPELINE = [
-    "ovos-adapt-pipeline-plugin-high",
-    "ovos-adapt-pipeline-plugin-medium",
-    "ovos-adapt-pipeline-plugin-low",
-    "ovos-padacioso-pipeline-plugin",
-]
-
 
 class _IntentRoutingMixin:
-    """Shared MiniCroft setup for Adapt intent routing."""
+    """Shared MiniCroft setup for intent routing."""
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
 
     @classmethod
     def tearDownClass(cls):
         if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
+    def _fired_types(self, utterance: str) -> list:
+        session = Session(f"e2e-en_us-{hash(utterance)}")
+        session.lang = LANG
+        session.pipeline = PIPELINE
+        capture = CaptureSession(self.minicroft)
+        capture.capture(Message(
+            "recognizer_loop:utterance",
+            {"utterances": [utterance], "lang": LANG},
+            {"session": session.serialize()},
+        ), timeout=15)
+        return [m.msg_type for m in capture.finish()]
+
     def _assert_intent(self, utterance: str, intent_name: str):
-        intent_msg_type = f"{SKILL_ID}:{intent_name}"
-        matched = []
-        handler = lambda msg: matched.append(msg)
-        self.minicroft.bus.on(intent_msg_type, handler)
-        try:
-            session = Session(f"e2e-en_us-{intent_name}-{hash(utterance)}")
-            session.lang = LANG
-            session.pipeline = PIPELINE
-            self.minicroft.bus.emit(Message(
-                "recognizer_loop:utterance",
-                {"utterances": [utterance], "lang": LANG},
-                {"session": session.serialize()},
-            ))
-            deadline = time.monotonic() + 15
-            while not matched and time.monotonic() < deadline:
-                time.sleep(0.2)
-        finally:
-            self.minicroft.bus.remove(intent_msg_type, handler)
-        self.assertTrue(
-            matched,
-            f"{utterance!r} did not route to {intent_name}",
-        )
+        TALLY.assert_routed(utterance, f"{SKILL_ID}:{intent_name}",
+                            self._fired_types(utterance))
 
     def _assert_not_intent(self, utterance: str, intent_name: str):
-        intent_msg_type = f"{SKILL_ID}:{intent_name}"
-        matched = []
-        handler = lambda msg: matched.append(msg)
-        self.minicroft.bus.on(intent_msg_type, handler)
-        try:
-            session = Session(f"e2e-en_us-not-{intent_name}-{hash(utterance)}")
-            session.lang = LANG
-            session.pipeline = PIPELINE
-            self.minicroft.bus.emit(Message(
-                "recognizer_loop:utterance",
-                {"utterances": [utterance], "lang": LANG},
-                {"session": session.serialize()},
-            ))
-            deadline = time.monotonic() + 5
-            while not matched and time.monotonic() < deadline:
-                time.sleep(0.2)
-        finally:
-            self.minicroft.bus.remove(intent_msg_type, handler)
-        self.assertFalse(
-            matched,
-            f"{utterance!r} incorrectly routed to {intent_name}",
-        )
+        TALLY.assert_not_routed(utterance, f"{SKILL_ID}:{intent_name}",
+                                self._fired_types(utterance))
 
 
 class TestIPIntent(_IntentRoutingMixin, TestCase):
@@ -106,6 +59,9 @@ class TestIPIntent(_IntentRoutingMixin, TestCase):
 
     def test_what_is_my_ip(self):
         self._assert_intent("what is my ip", "ip")
+
+    def test_what_is_my_ip_address(self):
+        self._assert_intent("what is my ip address", "ip")
 
     def test_whats_my_local_ip_address(self):
         self._assert_intent("what's my local ip address", "ip")
