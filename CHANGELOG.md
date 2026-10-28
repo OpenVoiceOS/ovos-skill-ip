@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a5) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a4...0.9.0a5)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#109](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/109) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a4](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a4) (2026-10-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a3...0.9.0a4)
