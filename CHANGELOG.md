@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a6](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a6) (2026-10-29)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a5...0.9.0a6)
+
+**Merged pull requests:**
+
+- test: assert what the ip handlers say, not only where they route [\#112](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/112) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a5](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.9.0a5) (2026-10-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.9.0a4...0.9.0a5)
@@ -411,10 +419,6 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.1.0...0.2.1a1)
 
-**Merged pull requests:**
-
-- fix/ip\_render [\#9](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/9) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.1.0](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/0.1.0) (2024-09-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/0.2.0...0.1.0)
@@ -423,18 +427,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/V0.1.0...0.2.0)
 
-**Implemented enhancements:**
-
-- fix: make digits optionally + remove qml extension [\#7](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/7) ([PocketMiner82](https://github.com/PocketMiner82))
-
 ## [V0.1.0](https://github.com/OpenVoiceOS/ovos-skill-ip/tree/V0.1.0) (2024-09-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-ip/compare/1c814380917dfc0050ce8cb32ac92471b3fe4815...V0.1.0)
-
-**Merged pull requests:**
-
-- pt-pt/translate-intents [\#6](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/6) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- pt-pt/translate-vocabs [\#5](https://github.com/OpenVoiceOS/ovos-skill-ip/pull/5) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
