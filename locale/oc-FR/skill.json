@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Adreça IP de l'aparelh",
+  "description": "Informacions sus la connexion de ret",
+  "examples": [
+    "Quina es la tiá adreça de ret?",
+    "Quina es la tiá adreça IP?",
+    "Digas-me la tiá adreça IP",
+    "Digas-me la tiá adreça de ret",
+    "A quina ret siás connectat?"
+  ],
+  "tags": [
+    "Adreça IP",
+    "AdreçaIP",
+    "adreça-ret",
+    "ret",
+    "sistèma"
+  ]
+}

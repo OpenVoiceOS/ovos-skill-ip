@@ -1,5 +1,0 @@
-{
-  "what.ssid.intent": [
-    "mit (welche|welchem|welchen|welcher|welches) (netzwerk|wlan|wifi) bist du verbunden\nwomit bist du verbunden\nmit was (für|) (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|) bist du verbunden\nbist du mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel) verbunden\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Netzwerkverbindung\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Verbindung mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\nhast du (ein|einer|eine|eines|einem|einer|ein|einem|eines|) Verbindung mit (ein|einer|eine|eines|einem|einer|ein|einem|eines|) (netzwerk|wlan|wifi|kabel|ssid|netzwerkkabel)\n(wie|) bist du (mit dem (wlan|wifi|netzwerk)|) verbunden"
-  ]
-}

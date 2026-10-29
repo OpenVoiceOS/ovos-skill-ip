@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Tansa IP n Ubenak",
+  "description": "Talɣut ɣef tuqqna n uẓeṭṭa",
+  "examples": [
+    "D acu-t tansa n uẓeṭṭa-inek?",
+    "D acu-t tansa-k IP?",
+    "Ini-yi-d tansa-k IP",
+    "Ini-yi-d tansa n uẓeṭṭa-inek",
+    "D acu-t uẓeṭṭa i deg tellid?"
+  ],
+  "tags": [
+    "IP-address",
+    "IPaddress",
+    "network-address",
+    "network",
+    "system"
+  ]
+}

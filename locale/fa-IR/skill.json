@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Device IP Address",
+  "description": "اطلاعات اتصال شبکه",
+  "examples": [
+    "آی پی من چیست",
+    "آی پی عمومی من چیست",
+    "رقم های آخر آی پی من چیست"
+  ],
+  "tags": [
+    "IP-address",
+    "IPaddress",
+    "network-address",
+    "network",
+    "system"
+  ]
+}

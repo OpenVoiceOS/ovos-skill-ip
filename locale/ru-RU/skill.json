@@ -1,0 +1,18 @@
+{
+  "skill_id": "ovos-skill-ip.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-ip",
+  "name": "Device IP Address",
+  "description": "Информация о подключении к сети",
+  "examples": [
+    "какой у меня IP адрес",
+    "скажи мне мой публичный IP",
+    "какие последние цифры моего IP адреса"
+  ],
+  "tags": [
+    "IP-address",
+    "IPaddress",
+    "network-address",
+    "network",
+    "system"
+  ]
+}
