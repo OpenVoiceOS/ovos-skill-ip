@@ -22,6 +22,7 @@ dependencies = [
 test = [
     "ovoscope>=1.12.1a1",
     "ovos-m2v-pipeline>=0.37.3a1",
+    "ovos-spec-tools>=1.12.0a1",
     "pytest>=7.0.0,<9",
     "pytest-timeout>=2.0.0"
 ]

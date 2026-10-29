@@ -1,18 +1,55 @@
-"""End-to-end intent-routing tests for ovos-skill-ip (en-US).
+"""End-to-end intent tests for ovos-skill-ip (en-US).
+
+Each case routes an utterance and then checks what the handler said: every
+``speak`` names a dialog the handler may use, its text is one rendering of
+that dialog file on disk with the data the message carries, and the address
+in that data is one this host has, read with ``ifaddr`` and not with the
+skill's own helper.
 
 The ``what_ssid.intent`` and ``wifi_signal.intent`` handlers only register
 when ``iwlist`` is present on the host; their routing tests skip without it.
 """
+import re
+from pathlib import Path
 from shutil import which
 from unittest import TestCase, skipUnless
 
+from ifaddr import get_adapters
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
+from ovos_spec_tools.expansion import expand
+from ovos_spec_tools.resources import LocaleResources
 from ovoscope import CaptureSession
 from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-ip.openvoiceos"
 LANG = "en-US"
+RESOURCES = LocaleResources(Path(__file__).resolve().parents[2] / "locale")
+
+# The dialogs each handler can speak, read from the handlers in __init__.py.
+DIALOGS = {
+    "ip": {"my_address_is", "my_address_on_x_is_y", "no_network_connection"},
+    "public_ip": {"my_public_ip", "public_ip_error"},
+    "last_ip_digits": {"last_digits", "last_digits_device", "no_network_connection"},
+}
+SHARED_DIALOGS = {"no_network_connection"}
+
+
+def _variants(dialog: str) -> set:
+    """Every phrasing of a dialog file, with its slots still unfilled."""
+    vocabularies = RESOURCES.vocabularies(LANG)
+    return {variant for phrase in RESOURCES.load_dialog(dialog, LANG)
+            for variant in expand(phrase, vocabularies)}
+
+
+def _renderings(dialog: str, slots: dict) -> set:
+    return {re.sub(r"\{(\w+)\}", lambda m: str(slots[m.group(1)]), variant)
+            for variant in _variants(dialog)}
+
+
+def _host_ipv4() -> dict:
+    return {adapter.nice_name: ip.ip for adapter in get_adapters()
+            if adapter.name != "lo" for ip in adapter.ips if ip.is_IPv4}
 
 
 class _IntentRoutingMixin:
@@ -27,7 +64,7 @@ class _IntentRoutingMixin:
         if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
-    def _fired_types(self, utterance: str) -> list:
+    def _run(self, utterance: str) -> list:
         session = Session(f"e2e-en_us-{hash(utterance)}")
         session.lang = LANG
         session.pipeline = PIPELINE
@@ -37,15 +74,47 @@ class _IntentRoutingMixin:
             {"utterances": [utterance], "lang": LANG},
             {"session": session.serialize()},
         ), timeout=15)
-        return [m.msg_type for m in capture.finish()]
+        return capture.finish()
 
     def _assert_intent(self, utterance: str, intent_name: str):
+        messages = self._run(utterance)
         TALLY.assert_routed(utterance, f"{SKILL_ID}:{intent_name}",
-                            self._fired_types(utterance))
+                            [m.msg_type for m in messages])
+        if intent_name in DIALOGS:
+            self._assert_spoke_own_dialog(utterance, intent_name, messages)
+
+    def _assert_spoke_own_dialog(self, utterance: str, intent_name: str, messages: list):
+        speaks = [m for m in messages if m.msg_type in ("speak", "ovos.utterance.speak")]
+        self.assertTrue(speaks, f"{utterance!r} routed to {intent_name} and said nothing")
+        host = _host_ipv4()
+        for speak in speaks:
+            meta = speak.data.get("meta", {})
+            dialog, slots = meta.get("dialog"), meta.get("data", {})
+            self.assertIn(dialog, DIALOGS[intent_name],
+                          f"{utterance!r}: {intent_name} spoke the {dialog!r} dialog")
+            self.assertIn(speak.data["utterance"], _renderings(dialog, slots),
+                          f"{utterance!r}: the spoken text is not a line of {dialog}.dialog")
+            if "ip" in slots and intent_name == "ip":
+                self.assertIn(slots["ip"].replace(" dot ", "."), host.values())
+            if "digits" in slots:
+                self.assertIn(slots["digits"], {ip.split(".")[-1] for ip in host.values()})
 
     def _assert_not_intent(self, utterance: str, intent_name: str):
         TALLY.assert_not_routed(utterance, f"{SKILL_ID}:{intent_name}",
-                                self._fired_types(utterance))
+                                [m.msg_type for m in self._run(utterance)])
+
+
+class TestDialogsAreDisjoint(TestCase):
+    """A line that two handlers can say would let one pass for the other."""
+
+    def test_no_phrasing_belongs_to_two_handlers(self):
+        own = {intent: set().union(*(_variants(d) for d in dialogs - SHARED_DIALOGS))
+               for intent, dialogs in DIALOGS.items()}
+        self.assertTrue(all(own.values()), own)
+        names = sorted(own)
+        for i, first in enumerate(names):
+            for second in names[i + 1:]:
+                self.assertFalse(own[first] & own[second], f"{first} and {second}")
 
 
 class TestIPIntent(_IntentRoutingMixin, TestCase):
